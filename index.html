@@ -12,13 +12,42 @@
         .btn { display: inline-block; padding: 15px 25px; margin: 10px; border-radius: 5px; text-decoration: none; font-weight: bold; color: white; }
         .whatsapp { background: #25D366; }
         .email { background: #ea4335; }
+.glowing-bounce {
+    display: inline-block;
+    color: #007bff; /* Main text color */
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    /* Animation settings */
+    animation: glow 1.5s ease-in-out infinite alternate, 
+               bounce 2s ease-in-out infinite;
+            }
+            
+            /* The Glowing Effect */
+            @keyframes glow {
+                from {
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #007bff, 0 0 20px #007bff;
+                }
+                to {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #4dabf7, 0 0 30px #4dabf7, 0 0 40px #4dabf7;
+                }
+            }
+            
+            /* The Bouncing Effect */
+            @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+        
     </style>
 </head>
 <body>
     <div class="container">
         <h1>This Domain is For Sale</h1>
         <div class="domain">BLOCKDAG.IN</div>
-        <div class="domain">other Domains : blockdag.co.in  </div>
+        <div class="domain-name glowing-bounce">other Domains : blockdag.co.in  </div>
         <div class="domain"><a>blockdag.life , blockdag.email <br> blockdag.pro, blockdag.shop</a> </div>
         <p>Serious inquiries only. Contact the owner directly via:</p>
         
